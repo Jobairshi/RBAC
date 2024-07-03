@@ -1,6 +1,3 @@
-Sure, here's the revised version formatted for GitHub README.md, with the License and Contact sections removed:
-
----
 
 # RBAC
 
