@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { UserInfoService } from './user_info.service';
 import { Prisma } from '@prisma/client';
+import { jwtguard } from 'src/auth/guards/jwt-auth.guard';
 
 
 @Controller('userinfo')
@@ -27,7 +28,7 @@ export class UserInfoController {
   update(@Param('id') id: string, @Body() updateUserInfoDto: Prisma.usersUpdateInput) {
     return this.userInfoService.update(id, updateUserInfoDto);
   }
-
+  @UseGuards(jwtguard)
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.userInfoService.remove(id);
