@@ -1,10 +1,10 @@
-
 # RBAC
 
 A brief description of the RBAC project.
 
 ## Table of Contents
 - [Installation](#installation)
+- [Swagger API documentation](#swagger-api-documentation)
 
 ## Installation
 
@@ -41,7 +41,7 @@ Ensure you have the following prerequisites installed:
 
 5. **Navigate to the Client Side of the project (rbac):**
    ```sh
-   cd rbac
+   cd ../rbac
    ```
 
 6. **Install client-side dependencies:**
@@ -54,3 +54,16 @@ Ensure you have the following prerequisites installed:
    npm run dev
    ```
 
+## Swagger API documentation
+
+This project uses Swagger to document the API endpoints.
+
+### Accessing the API Documentation
+
+To view the API documentation, follow these steps:
+
+1. Make sure the server is running.
+2. Open your web browser and navigate to `http://localhost:4000/api`.
+
+You will see an interactive UI where you can explore the API endpoints, view request and response formats, and test the API.
+```
